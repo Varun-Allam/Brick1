@@ -34,6 +34,19 @@ $(document).ready(function () {
         effect:"fadeOutUp", 
         sync: true,
     },
-});
+}); 
+
+ //mic_btn_click 
+
+ $("#micBtn").click(function () { 
+    eel.playAssistantSound()
+
+    
+    $("#oval").attr("hidden", true);
+    $("#siriId").attr("hidden", false);
+
+    
+ });
+
 
 });

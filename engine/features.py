@@ -1,5 +1,9 @@
 import os
-from playsound import playsound
+from playsound import playsound 
+import eel
+
+
+@eel.expose
 
 def playAssistantSound():
     # Build correct absolute path

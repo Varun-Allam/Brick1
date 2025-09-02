@@ -45,6 +45,7 @@ $(document).ready(function () {
     $("#oval").attr("hidden", true);
     $("#siriId").attr("hidden", false);
 
+    eel.takecommand()() 
     
  });
 

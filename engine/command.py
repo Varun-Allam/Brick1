@@ -1,5 +1,7 @@
 import pyttsx3
 import speech_recognition as sr
+import eel 
+
 
 def speak(text):
     engine = pyttsx3.init('nsss')  # 'nsss' = macOS driver
@@ -12,6 +14,7 @@ def speak(text):
     engine.say(text)
     engine.runAndWait()
 
+@eel.expose 
 def takecommand():
     r = sr.Recognizer()
     with sr.Microphone() as source:
@@ -24,11 +27,14 @@ def takecommand():
         print('recognizing...')
         # use Google recognizer (works without API key)
         query = r.recognize_google(audio, language='en-in')
-        print(f"user said: {query}")
+        print(f"user said: {query}") 
+        speak(query)
     except Exception as e:
-        print("Error:", e)
+       
         return ""
-    return query.lower()
+    return query.lower()  
 
-text = takecommand()
-speak(text if text else "I did not catch that")
+
+
+
+

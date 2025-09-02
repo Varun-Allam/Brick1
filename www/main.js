@@ -39,7 +39,7 @@ $(document).ready(function () {
  //mic_btn_click 
 
  $("#micBtn").click(function () { 
-    eel.playAssistantSound()
+    eel.playAssistantSound2()
 
     
     $("#oval").attr("hidden", true);

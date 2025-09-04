@@ -9,7 +9,7 @@ def speak(text):
     voices = engine.getProperty('voices')
     
     # Pick a voice (list them first to choose the right index)
-    engine.setProperty('voice', voices[3].id)
+    engine.setProperty('voice', voices[1].id)
     engine.setProperty('rate', 150)
     eel.DisplayMessage(text)
     engine.say(text)

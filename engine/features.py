@@ -5,7 +5,7 @@ import sqlite3
 import re
 from playsound import playsound 
 import eel
-from engine.config import Assistant_Name
+from engine.config import assistant_name
 from engine.command import speak 
 import pywhatkit as kit  
 
@@ -43,7 +43,7 @@ def playAssistantSound2():
 
 
 def openCommand(query): 
-    query = query.replace(Assistant_Name, "") 
+    query = query.replace(assistant_name, "") 
     query = query.replace("open","") 
     query.lower() 
 
